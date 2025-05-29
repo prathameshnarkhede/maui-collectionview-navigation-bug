@@ -17,7 +17,7 @@ public class LibraryBrowseBooksPage : ContentPage
             ItemTemplate = new DataTemplate(() =>
             {
                 var label = new Label();
-                label.SetBinding(Label.TextProperty, "Name");
+                label.SetBinding(Label.TextProperty, static (Book b) => b.Title);
                 return new StackLayout
                 {
                     Children = { label },
